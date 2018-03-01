@@ -15,5 +15,8 @@ Route::get('/','PessoasController@index');
 Route::get('/create_pessoas','PessoasController@create');
 Route::post('/create_pessoas','PessoasController@store');
 Route::get('/edit_pessoas/{id}','PessoasController@edit');
-Route::put('/edit_pessoas/{id}','PessoasController@update');
+//Route::put('/edit_pessoas/{id}','PessoasController@update');
+Route::get('/welcome/{locale}', function ($locale) {
+    App::setLocale($locale);    
+});
 

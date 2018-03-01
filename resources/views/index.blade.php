@@ -28,8 +28,7 @@
         <h1>Pessoas</h1>
         <p><a href="{{ url('/create_pessoas') }}" class="btn btn-primary">Novo</a></p>
     </div>
-    <div class="container _content">
-        
+    <div class="container _content">       
         <table class="table">
         <thead>
             <tr>
@@ -45,17 +44,15 @@
                     <td>{{ $pessoass->RECNO }}</td>
                     <td>{{ $pessoass->NOME }}</td>
                     <td>{{ $pessoass->EMAIL }}</td>
-                    <td>                           
+                    <td>           
+                    <a href="{{ url(welcome), 'pt-BR' }}" >a</a>                
                         <button class="btn btn-danger" type="submit">Deletar</button>
-                         <!-- <a class="btn btn-success" href="{{ route('edit_pessoas', $pessoas->RECNO) }}">Editar</a>  -->
+                         
                     </td>
                 </tr>
             @endforeach                
             </tbody>
         </table>        
-    </div>
-    <div class="text-center">
-            {!! $pessoas->links(); !!}
     </div>
 
 </body>

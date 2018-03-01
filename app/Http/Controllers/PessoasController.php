@@ -14,12 +14,12 @@ class PessoasController extends Controller
      */
     public function index()
     {
-        //$pessoas = pessoas::all();
+        $pessoas = pessoas::all();
         //dd($pessoas);
-        //return view('index', compact('pessoas'));
-        $pessoas = pessoas::orderBy('RECNO', 'DESC')->paginate(4);        
-        //dd($pessoas);
-        return view('index',['pessoas' => $pessoas]);
+        return view('index', compact('pessoas'));
+/*         $pessoas = pessoas::orderBy('RECNO', 'ASC');
+        
+        return view('index',['pessoas' => $pessoas]);     */    
     }
 
     /**
@@ -68,9 +68,9 @@ class PessoasController extends Controller
      */
     public function edit($id)
     {
-        $pessoas = pessoas::where('RECNO', '=' , $id)->firstOrFail();
+         $pessoas = pessoas::where('RECNO', '=' , $id)->firstOrFail();
         dd($pessoas); 
-        return view('edit', compact('pessoas'));
+        return view('edit', compact('pessoas')) ;
     }
 
     /**

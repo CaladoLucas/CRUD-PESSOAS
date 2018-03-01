@@ -10,7 +10,7 @@ class pessoas extends Model
 
     protected $guarded = ['RECNO'];
 
-    protected $fillable = ['NOME','EMAIL'];
+    protected $fillable = ['nome','email'];
 
     public $timestamps = false;
 }
